@@ -1,10 +1,12 @@
 import React from 'react'
 import logoSVG from '../assets/img/pizza-logo.svg';
 import { Button } from './index'
+import {Link} from 'react-router-dom';
 
 const Header = (props) => {
     return <div className="header">
         <div className="container">
+            <Link to='/'>
             <div className="header__logo">
                 <img width="38" src={logoSVG} alt="Pizza logo"/>
                 <div>
@@ -12,7 +14,9 @@ const Header = (props) => {
                     <p>самая вкусная пицца во вселенной</p>
                 </div>
             </div>
+            </Link>
             <div className="header__cart">
+                <Link to='/cart'>
                 <Button className='button--cart'>
                 {/* button button--cart*/}
                     <span>520 ₽</span>
@@ -48,6 +52,7 @@ const Header = (props) => {
                     </svg>
                     <span>3</span>
                 </Button>
+                </Link>
             </div>
         </div>
     </div>
